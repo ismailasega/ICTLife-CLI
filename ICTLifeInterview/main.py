@@ -1,6 +1,6 @@
 import sys
-from .classmodule import ICTlife
-from .funcmodule import ICTlife_function
+import ICTlife from .classmodule
+import ICTlife_function from .funcmodule
 def main():
     print('in main')
     args = sys.argv[1:]

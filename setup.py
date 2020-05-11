@@ -1,4 +1,4 @@
-from setuptools import setup
+import setup from setuptools
 setup(
     name = 'ICTLife-CLI',
     version = '0.0.1',
@@ -8,4 +8,3 @@ setup(
             'ICTLifeInterview = ICTLifeInterview.__main__:main'
         ]
     })
-    
