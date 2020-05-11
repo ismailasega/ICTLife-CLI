@@ -1,12 +1,14 @@
 import sys
 def main():
 
-    login=input('Please enter your Access ID: ')
+    AWS_ACCESS_KEY_ID=input('Please enter your AWS_ACCESS_KEY_ID: ')
     for Access_ID in open('D:\ICTLife_credentials.txt', 'r').readlines():
         Access_info = Access_ID.split()
-        if login == Access_info[0]:
+        if AWS_ACCESS_KEY_ID == Access_info[0]:
             print('correct credentials')
-
+            return True
+        print("Incorrect credentials.")
+        return False
 
 if __name__ == '__main__':
     main()
