@@ -1,7 +1,7 @@
-import setup from setuptools
+from setuptools import setup
 setup(
     name = 'ICTLife-CLI',
-    version = '0.0.1',
+    version = '1.0',
     packages = ['ICTLifeInterview'],
     entry_points = {
         'console_scripts': [
