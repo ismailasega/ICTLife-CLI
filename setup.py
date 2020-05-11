@@ -8,3 +8,4 @@ setup(
             'ICTLifeInterview = ICTLifeInterview.__main__:main'
         ]
     })
+.
