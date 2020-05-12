@@ -13,7 +13,7 @@ if access_allowed():
 else:
     print('Invalid IAM user')
     sys.exit()
-
+#*******************************end of IAM User credentials Validation*******************************
 def main():
     args = sys.argv[1:]
     print('count of args :: {}'.format(len(args)))
