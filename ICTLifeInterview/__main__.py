@@ -8,7 +8,7 @@ def access_allowed(): #Validating IAM user using the assigned AWS_ACCESS_KEY_ID
     return False
 
 if access_allowed():
-    print('\n' '******your IAM credentials******\n', open('D:\ICTLife_credentials.txt', 'r').read(-9), '\n' '******Keep them safe******', '\n')
+    print('\n' '******your IAM credentials******\n', open('D:\ICTLife_credentials.txt', 'r').read(), '\n' '******Keep them safe******', '\n')
     print('Access Granted' '\n' 'press any key to continue')
 else:
     print('Invalid IAM user')
