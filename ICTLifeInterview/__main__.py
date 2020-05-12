@@ -16,7 +16,7 @@ def main():
         print('\n' '******your IAM credentials******\n', open('D:\ICTLife_credentials.txt', 'r').read(), '\n' '******Keep them safe******', '\n')
         print('Access Granted\n')
     else:
-        print('Invalid IAM user')
+        print('\nInvalid IAM user \nRun ICTLifeInterview Application again and Use correct IAM AWS_ACCESS_KEY_ID\n')
         sys.exit(0) #if entered AWS_ACCESS_KEY_ID Invalid program exits
 
     ResourceName = ['IAM_Users', 'EC2_Instatnces', 'RDS_Instances', 'S3 buckets', 'ECR_Repos', 'ECS_Clusters' ]#list of resources by name
