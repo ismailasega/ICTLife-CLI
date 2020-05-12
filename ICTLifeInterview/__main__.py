@@ -19,18 +19,26 @@ def main():
         print('Invalid IAM user')
         sys.exit(0) #if entered AWS_ACCESS_KEY_ID Invalid program exits
 
-    ResourceName = ['IAM_Users', 'EC2_Instatnces', 'RDS_Instances', 'S3 buckets', 'ECR_Repos', 'ECS_Clusters' ]
-    #list of resources by name
+    ResourceName = ['IAM_Users', 'EC2_Instatnces', 'RDS_Instances', 'S3 buckets', 'ECR_Repos', 'ECS_Clusters' ]#list of resources by name
     Allocation = [2, 6, 5, 1, 7, 15] #list of resources by allocations
+    AvilableResouces = resources.DataFrame(ResourceName, columns = ['ResourceName'])# A DataFrame for only the resources by name
     NumberofResources = resources.DataFrame(list(zip(ResourceName, Allocation)),#using zipping two lists
-                    columns = ['ResourceName' , 'Allocation'],)#assigning column names for resources DataFrame
+                    columns = ['ResourceName' , 'Allocation'])#assigning column names for resources DataFrame
 
-    print('Press Enter to continue or press Esc to Exit: \n')
-    while True: #Assign keyboard keys to procced or simply exit program after login
+    print('''Help Menu:
+    1.To list ResourceName press F1
+    2.To list all resources and allocations press F2
+    3.To Exit/Quit press Esc\n''')#Help Menu to ease application usage
+
+    while True: #Assigning keyboard keys to use help menu options after login
         try:
-            if keyboard.is_pressed('ENTER'):#proceeds to diplay the resources
-                print('Below is a list of all resourses\n')
-                print(NumberofResources.to_string(index=False),'\n') #prints out a DataFrame of the resources
+            if keyboard.is_pressed('F1'):
+                print('Below is a list of resourse names\n')#diplays the resources names only
+                print(AvilableResouces.to_string(index=False),'\n') #prints out a DataFrame of the resources names
+                break
+            if keyboard.is_pressed('F2'):#diplays the resources
+                print('Below is a list of all resourses and allocations\n')
+                print(NumberofResources.to_string(index=False),'\n') #prints out a DataFrame of the resources and allocations
                 break
             if keyboard.is_pressed('Esc'): #exits program
                 print('\nExiting...')
