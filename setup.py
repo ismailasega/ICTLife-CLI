@@ -2,7 +2,7 @@ from setuptools import setup #importing the setup function from the python setup
 setup(
     name = 'ICTLife-CLI', #CLI-Application name
     version = '1.0', #Application Version
-    packages = ['ICTLifeInterview'], #Application Package
+    packages = ['ICTLifeInterview'], #Application Package/module
     entry_points = {
         'console_scripts': [
             'ICTLifeInterview = ICTLifeInterview.__main__:main'
